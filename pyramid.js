@@ -1,3 +1,4 @@
+// First Method
 function pyramid(n)
 {
 
@@ -21,3 +22,27 @@ for(let row = 0;row<n;row++)
   newLine = ' '
 }
 }
+
+// Second Method using recursion
+
+function pyramid2(n,row=0,columns=n*2-1,newLine='')
+{
+  mid = Math.floor(columns/2);
+  let column = 0;
+  while(column < columns)
+  {
+    if(column >= mid-row && column <= mid+row)
+    {
+      newLine += "*";
+    }
+    else
+    {
+      newLine += ' ';
+    }
+    column++;
+  }
+console.log(newLine);
+if(row<n)
+{
+pyramid2(n,row++,columns,newLine='');
+}}
