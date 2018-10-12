@@ -42,7 +42,9 @@ function pyramid2(n,row=0,columns=n*2-1,newLine='')
     column++;
   }
 console.log(newLine);
-if(row<n)
-{
-pyramid2(n,row++,columns,newLine='');
-}}
+row++;
+newLine='';
+if(row<n){
+pyramid2(n,row,columns,newLine);
+}
+}
