@@ -1,0 +1,11 @@
+function fibonacci(n)
+{
+let arr = [0,1];
+for (let i=2;i<=n ; i++)
+{
+let firstElement= arr[ i - 2];
+let lastElement = arr[i-1];
+arr.push(firstElement+lastElement);
+}
+return arr;
+}
